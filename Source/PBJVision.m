@@ -1092,13 +1092,13 @@ typedef void (^PBJVisionBlock)();
         [self _setOrientationForConnection:videoConnection];
         
         // setup video stabilization, if available
-        if ([videoConnection isVideoStabilizationSupported]) {
-            if ([videoConnection respondsToSelector:@selector(setPreferredVideoStabilizationMode:)]) {
-                [videoConnection setPreferredVideoStabilizationMode:AVCaptureVideoStabilizationModeAuto];
-            } else {
-                [videoConnection setEnablesVideoStabilizationWhenAvailable:YES];
-            }
-        }
+        //if ([videoConnection isVideoStabilizationSupported]) {
+            //if ([videoConnection respondsToSelector:@selector(setPreferredVideoStabilizationMode:)]) {
+                //[videoConnection setPreferredVideoStabilizationMode:AVCaptureVideoStabilizationModeAuto];
+            //} else {
+                //[videoConnection setEnablesVideoStabilizationWhenAvailable:YES];
+            //}
+        //}
         
         // discard late frames
         [_captureOutputVideo setAlwaysDiscardsLateVideoFrames:NO];
